@@ -4,7 +4,7 @@ package com.opensource.cats.catslibrary;
  * Created by C on 2017-05-29.
  */
 
-public class CatsMobileController {
+public class    CatsMobileController {
 
     private static float filterCoefficient = 0.95f;
     private static double LeftMotionSpread  = 30;

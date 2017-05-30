@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
 
-import static com.opensource.cats.catslibrary.CatsWearableData.setEchoThreshold;
-import static com.opensource.cats.catslibrary.CatsWearableData.setThresholdTime;
-import static com.opensource.cats.catslibrary.CatsWearableData.setWeightSensors;
+import static com.opensource.cats.catslibrary.CatsWearableController.setEchoThreshold;
+import static com.opensource.cats.catslibrary.CatsWearableController.setThresholdTime;
+import static com.opensource.cats.catslibrary.CatsWearableController.setWeightSensors;
 
 public class WearableActivity extends Activity {
 

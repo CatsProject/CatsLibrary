@@ -18,10 +18,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static com.example.c.catslibrary.CatsWearableData.accData;
-import static com.example.c.catslibrary.CatsWearableData.gyroData;
-import static com.example.c.catslibrary.CatsWearableData.gyroTimeStamp;
-import static com.example.c.catslibrary.CatsWearableData.magnetData;
+import static com.opensource.cats.catslibrary.CatsWearableData.accData;
+import static com.opensource.cats.catslibrary.CatsWearableData.gyroData;
+import static com.opensource.cats.catslibrary.CatsWearableData.gyroTimeStamp;
+import static com.opensource.cats.catslibrary.CatsWearableData.magnetData;
 
 
 /**

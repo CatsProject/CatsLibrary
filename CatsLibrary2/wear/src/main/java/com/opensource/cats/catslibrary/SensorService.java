@@ -194,20 +194,20 @@ public class SensorService extends Service implements SensorEventListener, TagNa
                 temp[7] = magnet[1];
                 temp[8] = magnet[2];
             }
-            double sumMaro = CatsWearableData.getWeightAcc() * ((Math.abs(maro[0])+ Math.abs(maro[1])+ Math.abs(maro[2])))
-                    +  CatsWearableData.getWeightGyro() * ((Math.abs(maro[3])+ Math.abs(maro[4])+ Math.abs(maro[5])))
-                    +  CatsWearableData.getWeightMag() * ((Math.abs(maro[6])+ Math.abs(maro[7])+ Math.abs(maro[8])));
+            double sumMaro = CatsWearableController.getWeightAcc() * ((Math.abs(maro[0])+ Math.abs(maro[1])+ Math.abs(maro[2])))
+                    +  CatsWearableController.getWeightGyro() * ((Math.abs(maro[3])+ Math.abs(maro[4])+ Math.abs(maro[5])))
+                    +  CatsWearableController.getWeightMag() * ((Math.abs(maro[6])+ Math.abs(maro[7])+ Math.abs(maro[8])));
 
 
             gyroTimeStamp[halfSecond] = timestamp;
-            if(sumMaro < CatsWearableData.getEchoThreshold())
+            if(sumMaro < CatsWearableController.getEchoThreshold())
             {
                 stacks++;
             }
             else {
                 stacks = 0;
             }
-           if(stacks < CatsWearableData.getThresholdTime()) {
+           if(stacks < CatsWearableController.getThresholdTime()) {
                 for (int i = 0; i < 3; i++) {
                     accData[halfSecond * 3 + i] = acc[i];
                     gyroData[halfSecond * 3 + i] = gyro[i];
