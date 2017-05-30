@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
 
+import static com.opensource.cats.catslibrary.CatsWearableData.setEchoThreshold;
+import static com.opensource.cats.catslibrary.CatsWearableData.setThresholdTime;
+import static com.opensource.cats.catslibrary.CatsWearableData.setWeightSensors;
+
 public class WearableActivity extends Activity {
 
     private TextView mTextView;
@@ -20,5 +24,15 @@ public class WearableActivity extends Activity {
                 mTextView = (TextView) stub.findViewById(R.id.text);
             }
         });
+
+        //Weight Sensor acc, gyro, mag  that make threshold
+        setWeightSensors(0.2,  0.6,  0.2);
+
+        // set threshold that is not
+        setEchoThreshold(30.5);
+
+        // set time that ignore sensors if these sensors  continue to fail threshold
+        setThresholdTime(30);
+
     }
 }
